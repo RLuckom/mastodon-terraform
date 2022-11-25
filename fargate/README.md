@@ -1,3 +1,9 @@
+### Disclaimer
+Running this module will incur AWS costs to your account. It is your responsibility to look at the resources terraform is going to create and
+understand the costs. Use at your own risk.
+
+It is not recommended to use this module for production instances.
+
 ### Overview
 The stack is one basic functioning Mastodon instance with its required services and data stores.
 It does not include Elastic for full-text search. It has working email and working media uploads to s3.

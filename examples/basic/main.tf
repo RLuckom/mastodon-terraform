@@ -1,6 +1,5 @@
 module mastodon {
-  source = "../../fargate"
-  //source = "github.com/RLuckom/mastodon-terraform//fargate"
+  source = "github.com/RLuckom/mastodon-terraform//fargate"
   admin = var.admin
   profile = var.profile
   mastodon_domain_parts = var.mastodon_domain_parts
