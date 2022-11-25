@@ -1,0 +1,28 @@
+admin = {
+  user_email = "user@example"
+  user_name  = "user"
+}
+
+profile = "aws_profile"
+
+// this object controls the domain that mastodon will be served on.
+// top_level_domain: the TLD; "com", "org", "social" etc
+// zone_level_domain: This plus the tld should add up to your
+//   hosted zone. In this example, the hosted zone would be "example.com"
+// subdomain_part: the subdomain at which mastodon should be hosted. If 
+//   blank, mastodon will be hosted on the zone domain
+// use_unique_suffix: Whether to append a unique suffix to the subdomain
+//   so that multiple mastodons can be stood up with the same basic domain
+//   settings
+mastodon_domain_parts = {
+  top_level_domain = "com"
+  zone_level_domain = "example"
+  subdomain_part = "mastodon"
+  use_unique_suffix = true
+}
+
+mastodon_image = {
+  name =  "tootsuite/mastodon"
+  // latest version confirmed to work is 4.0.2
+  tag = "latest"
+}

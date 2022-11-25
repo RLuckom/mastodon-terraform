@@ -1,0 +1,17 @@
+{
+    "capacityProviderStrategy": [],
+    "cluster": "${cluster}",
+    "count": 1,
+    "launchType": "FARGATE",
+    "overrides": {
+      "executionRoleArn": "${role}"
+    },
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": ${jsonencode(subnets)},
+            "securityGroups": ${jsonencode(security_groups)},
+            "assignPublicIp": "ENABLED"
+        }
+    },
+    "taskDefinition": "${task_definition}"
+}

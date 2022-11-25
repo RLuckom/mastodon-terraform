@@ -1,0 +1,22 @@
+provider "aws" {
+  shared_credentials_files = ["<LOCAL_PATH_TO_CREDENTIALS"]
+  region     = "<LOCAL_REGION>"
+  //profile    = "<PROFILE_NAME>"
+}
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.40"
+    }
+  }
+  required_version = ">= 1.2.4"
+  backend "s3" {
+    shared_credentials_file = "<LOCAL_PATH_TO_BUCKET_CREDENTIALS>"
+    bucket = "<STATE_BUCKET_NAME>"
+    key    = "<PATH_IN_STATE_BUCKET"
+    region = "<BUCKET_REGION>"
+    //profile    = "<BUCKET_PROFILE_NAME>"
+  }
+}
